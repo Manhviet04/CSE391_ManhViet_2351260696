@@ -1,15 +1,12 @@
 let studentCount = 0; // Đếm số sinh viên hiện tại
 let selectedRow = null; // Biến để ghi nhớ dòng đang được sửa
 
-// Tiết 4: Xóa dòng - xử lý DOM động
 function xoaDong(btn) {
     if (confirm("Bạn có chắc chắn muốn xóa?")) {
         btn.parentElement.parentElement.remove();
         thongBao("Xóa thành công!");
     }
 }
-
-// Tiết 5: Xác thực đầu vào (Validation)
 function kiemTraValidation() {
     const ten = document.getElementById("fullName").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -34,7 +31,6 @@ function kiemTraValidation() {
     return true;
 }
 
-// Tiết 6: Chỉnh sửa dòng - Giao diện cập nhật
 function suaDong(btn) {
     selectedRow = btn.parentElement.parentElement;
     
